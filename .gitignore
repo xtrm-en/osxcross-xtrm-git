@@ -1,3 +1,5 @@
 osxcross/
 src/
 .SRCINFO
+*.xz
+*.zst
