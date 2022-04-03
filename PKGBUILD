@@ -1,6 +1,7 @@
-# Maintainer: emersion <contact@emersion.fr>
-pkgname=osxcross-git
-_pkgname=${pkgname%-git}
+# Maintainer: xtrm <oss@xtrm.me>
+pkgname=osxcross-latest-git
+_pkgname=osxcross
+_sdkver=11.3
 pkgver=0.14
 pkgrel=1
 pkgdesc="OS X cross toolchain for Linux, FreeBSD and NetBSD"
@@ -16,17 +17,17 @@ optdepends=(
 )
 provides=("$_pkgname")
 conflicts=("$_pkgname")
-source=('git+https://github.com/tpoechtrager/osxcross.git' 'https://s3.dockerproject.org/darwin/v2/MacOSX10.11.sdk.tar.xz')
-md5sums=('SKIP' 'b0d81b95746c7e698c39c7df1e15ca7d')
-noextract=('MacOSX10.11.sdk.tar.xz')
+source=('git+https://github.com/tpoechtrager/osxcross.git' 'https://github.com/phracker/MacOSX-SDKs/releases/download/$_sdkver/MacOSX$_sdkver.tar.xz')
+md5sums=('SKIP' 'SKIP')
+noextract=('MacOSX$_sdkver.sdk.tar.xz')
 options=('!strip')
 
 build() {
 	cd "$srcdir/$_pkgname"
 
-	mv ../MacOSX10.11.sdk.tar.xz tarballs/
+	mv ../MacOSX$_sdkver.sdk.tar.xz tarballs/
 	sed -i -e 's|-march=native||g' build_clang.sh wrapper/build.sh
-	UNATTENDED=yes OSX_VERSION_MIN=10.6 ./build.sh
+	UNATTENDED=yes OSX_VERSION_MIN=$_sdkver ./build_wrapper.sh
 }
 
 package() {
