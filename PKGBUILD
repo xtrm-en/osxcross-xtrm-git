@@ -27,9 +27,10 @@ options=('!strip')
 prepare() {
 	msg2 'Prepare SDK'
 	cd "$srcdir"
-  # be evil and just copy over headers from libc++ package
-  cp -r /usr/include/c++/v1 "$_sdkname/usr/include/c++"
-  bsdtar cJf "$srcdir/$_pkgname/tarballs/$_sdkname.tar.xz" "$_sdkname"
+
+	# be evil and just copy over headers from libc++ package
+	cp -r /usr/include/c++/v1 "$_sdkname/usr/include/c++"
+	bsdtar cJf "$srcdir/$_pkgname/tarballs/$_sdkname.tar.xz" "$_sdkname"
 
 	msg2 'Prepare osxcross'
 	cd "$srcdir/$_pkgname"
