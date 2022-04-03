@@ -12,7 +12,7 @@ if this package **isn't in the AUR** yet, do the following:
 ```bash
 git clone https://github.com/xtrm-en/osxcross-latest-git
 cd osxcross-latest-git
-sudo makepkg -si
+makepkg -si
 ```
 
 # how to install
@@ -32,6 +32,6 @@ or
 # cloning directly from the AUR
 git clone https://aur.archlinux.org/osxcross-latest-git.git
 cd osxcross-latest-git
-sudo makepkg -si
+makepkg -si
 ```
 
