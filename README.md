@@ -1,4 +1,4 @@
-# osxcross-latest-git
+# osxcross-xtrm-git
 
 a properly maintained AUR package for the
 [osxcross](https://github.com/tpoechtrager/osxcross/) toolchain.
@@ -10,8 +10,8 @@ this version is built with the 11.3 OSX SDK
 if this package **isn't in the AUR** yet, do the following:
 
 ```bash
-git clone https://github.com/xtrm-en/osxcross-latest-git
-cd osxcross-latest-git
+git clone https://github.com/xtrm-en/osxcross-xtrm-git
+cd osxcross-xtrm-git
 makepkg -si
 ```
 
@@ -21,8 +21,8 @@ if by any chance i'm not lazy and put this on the AUR:
 
 ```bash
 # using your favorite AUR helper
-yay -S osxcross-latest-git
-paru osxcross-latest-git
+yay -S osxcross-xtrm-git
+paru osxcross-xtrm-git
 pamac install osxcross-latest-git
 ```
 
@@ -30,8 +30,8 @@ or
 
 ```bash
 # cloning directly from the AUR
-git clone https://aur.archlinux.org/osxcross-latest-git.git
-cd osxcross-latest-git
+git clone https://aur.archlinux.org/osxcross-xtrm-git.git
+cd osxcross-xtrm-git
 makepkg -si
 ```
 
