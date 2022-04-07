@@ -1,5 +1,6 @@
 osxcross/
 src/
+pkg/
 .SRCINFO
 *.xz
 *.zst
